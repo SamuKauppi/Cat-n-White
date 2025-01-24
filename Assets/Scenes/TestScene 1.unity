@@ -805,9 +805,9 @@ GameObject:
   - component: {fileID: 1296544546}
   - component: {fileID: 1296544545}
   - component: {fileID: 1296544544}
-  - component: {fileID: 1296544547}
   - component: {fileID: 1296544548}
   - component: {fileID: 1296544549}
+  - component: {fileID: 1296544550}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Player
@@ -909,22 +909,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &1296544547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296544542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9427bfee44621d4b81fcd6cf2d50593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityPoint: {fileID: 1882908425}
-  rb: {fileID: 1296544544}
-  moveSpeed: 4
-  angleOffset: 10
 --- !u!58 &1296544548
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -972,6 +956,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a67491c6cd5bf14998f49eb33fd9025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1296544550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296544542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9427bfee44621d4b81fcd6cf2d50593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityPoint: {fileID: 1882908425}
+  rb: {fileID: 1296544544}
+  moveSpeed: 10
+  maxSpeed: 10
 --- !u!1 &1882908423
 GameObject:
   m_ObjectHideFlags: 0
