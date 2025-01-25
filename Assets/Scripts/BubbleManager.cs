@@ -5,6 +5,14 @@ public class BubbleManager : MonoBehaviour
 {
 	public List<BubblePopper> bubbles;
 
+    private void Start()
+    {
+        for (int i = 0; i < bubbles.Count; i++)
+        {
+            bubbles[i].gameObject.SetActive(true);
+        }
+    }
+
     public void PopBubble()
     {
 		if(bubbles.Count > 0) {
