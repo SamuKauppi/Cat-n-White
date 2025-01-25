@@ -2,7 +2,6 @@
 {
 	Vision,
 	Gravity, 
-	Move, 
 	Kill, 
 	BubblePop
 }

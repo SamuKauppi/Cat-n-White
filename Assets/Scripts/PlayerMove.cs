@@ -6,11 +6,16 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private Vector2 respwan;
 
     Vector2 direction;
     private float angle;
 
-    private void FixedUpdate()
+	private void Start()
+	{
+		respwan = transform.position;
+	}
+	private void FixedUpdate()
     {
         CalculateAngle();
         CheckInput();
@@ -49,8 +54,14 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+
+    public void SetRespawn()
+    {
+        respwan = transform.position;
+    }
     public void KillPlayer()
     {
-        Debug.Log("Player Dies");
+        transform.position = respwan;
+        rb.velocity = Vector2.zero;
     }
 }

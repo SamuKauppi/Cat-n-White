@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private BubbleManager bubbleManager;
 	[SerializeField] private VisionManager visionManager;
 	[SerializeField] private GravityPoint gravityPoint;
+	[SerializeField] private PlayerMove player;
 
 	private void Awake()
 	{
@@ -19,20 +20,17 @@ public class GameManager : MonoBehaviour
 	{
 		switch (trigger)
 		{
-			case Type.Move:
-				Debug.Log("Move the trap");
-				break;
-
 			case Type.Gravity:
-				Debug.Log("Gravity changed");
+				gravityPoint.SwapGravity();
 				break;
 
 			case Type.Kill:
-				Debug.Log("Dead kitty");
+				player.KillPlayer();
 				break;
 
 			case Type.BubblePop:
 				bubbleManager.PopBubble();
+				player.SetRespawn();
 				break;
 
 			case Type.Vision:

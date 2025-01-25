@@ -13,6 +13,7 @@ public class Trigger : MonoBehaviour
 			GameManager.Instance.TriggerEvent(trigger);
 			if (destroy)
 			{
+				gameObject.GetComponent<BoxCollider2D>().enabled = false;
 				gameObject.GetComponent<SpriteRenderer>().enabled = false;
 			}
 		}
