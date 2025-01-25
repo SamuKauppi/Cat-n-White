@@ -5,6 +5,7 @@ using UnityEngine;
 public class VisionManager : MonoBehaviour
 {
 	[SerializeField] private BubbleManager bubbleManager;
+	[SerializeField] private PlayerMove player;
 	public Color black;
 	public Color white;
 	public float speed = 0.1f;
@@ -18,6 +19,7 @@ public class VisionManager : MonoBehaviour
 		while (t < speed)
 		{
 			t += Time.deltaTime;
+//			player.GetComponent<SpriteRenderer>().sprite= 
 			bubbleManager.bubbles[0].GetComponent<SpriteRenderer>().color = Color.Lerp(targetColor, currentColor, t / speed);
 			Camera.main.backgroundColor = Color.Lerp(currentColor, targetColor, t / speed);
 			yield return null;
