@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance { get; private set; }
 
+	[SerializeField] private BubbleManager bubbleManager;
+	[SerializeField] private VisionManager visionManager;
+	[SerializeField] private GravityPoint gravityPoint;
+
 	private void Awake()
 	{
 		Instance = this;
@@ -26,13 +30,13 @@ public class GameManager : MonoBehaviour
 			case Type.Kill:
 				Debug.Log("Dead kitty");
 				break;
+
 			case Type.BubblePop:
-				//Bubble.explote();
-				Debug.Log("Plop!");
+				bubbleManager.PopBubble();
 				break;
+
 			case Type.Vision:
-				//Bubble.explote();
-				Debug.Log("Switch black to white");
+				visionManager.SetActivated();
 				break;
 		}
 	}
