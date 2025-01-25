@@ -29,11 +29,6 @@ public class GravityPoint : MonoBehaviour
         {
             isSwapping = false;
         }
-
-        if (Input.GetKeyDown(KeyCode.W) && !isSwapping)
-        {
-            SwapGravity();
-        }
     }
 
     public void SwapGravity()
@@ -43,6 +38,6 @@ public class GravityPoint : MonoBehaviour
         swapDirection = transform.position - swapPosition;
         Physics2D.gravity = swapDirection;
         swapDist = Vector3.Distance(swapPosition, transform.position) * 1.5f;
-        playerRb.AddForce(playerTarget.up * 10f);
+        playerRb.AddForce(playerTarget.up * 10f, ForceMode2D.Impulse);
     }
 }
