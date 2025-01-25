@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private Vector2 respwan;
 
-    Vector2 direction;
+    private Vector2 direction;
     private float angle;
 
 	private void Start()
