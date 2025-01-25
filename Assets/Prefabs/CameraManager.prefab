@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDist: 5
-  cameraSpeed: 5
+  cameraSpeed: 10
   minDist: 0.1
   playerObj: {fileID: 0}
 --- !u!1 &8289905645376090825
