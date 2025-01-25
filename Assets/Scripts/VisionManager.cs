@@ -41,7 +41,7 @@ public class VisionManager : MonoBehaviour
 		else
 		{
 			player.GetComponent<SpriteRenderer>().sprite = Hblack;
-			t = 0;
+			t = 0; 
 			StartCoroutine(ShowThings(white, black));
 		}
 	}
