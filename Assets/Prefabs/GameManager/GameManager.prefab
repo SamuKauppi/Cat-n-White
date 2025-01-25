@@ -136,6 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubbleManager: {fileID: 9048726354426055215}
   player: {fileID: 0}
+  Hblack: {fileID: 0}
+  Hwhite: {fileID: 0}
   black: {r: 0, g: 0, b: 0, a: 1}
   white: {r: 1, g: 1, b: 1, a: 1}
   speed: 0.1

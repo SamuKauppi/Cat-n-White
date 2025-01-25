@@ -132,7 +132,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8271581}
   - component: {fileID: 8271582}
-  - component: {fileID: 8271583}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -213,7 +212,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8271583}
+      - m_Target: {fileID: 1266691600}
         m_TargetAssemblyTypeName: SetLevel, Assembly-CSharp
         m_MethodName: SetMusicLevel
         m_Mode: 0
@@ -225,20 +224,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8271583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8271580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1aaa28e6f12c41df82e4c78e2f4c9a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: b5da9d08a4bdb4d60a6bc763bef0fca5, type: 2}
-  audioSource: {fileID: 316906192}
 --- !u!1 &102269847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1266691598}
   - component: {fileID: 1266691599}
+  - component: {fileID: 1266691600}
   m_Layer: 0
   m_Name: MenuControl
   m_TagString: Untagged
@@ -1739,6 +1725,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 320192014}
+--- !u!114 &1266691600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266691597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1aaa28e6f12c41df82e4c78e2f4c9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: b5da9d08a4bdb4d60a6bc763bef0fca5, type: 2}
+  audioSource: {fileID: 316906192}
+  audioSlider: {fileID: 8271582}
 --- !u!1 &1287550519
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,6 +3094,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042805521}
   m_CullTransparentMesh: 1
+--- !u!1 &2043203705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043203707}
+  - component: {fileID: 2043203706}
+  m_Layer: 0
+  m_Name: PersitentManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2043203706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043203705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc9a908108b30449a6e311545c96910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2043203707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043203705}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3113,3 +3158,4 @@ SceneRoots:
   - {fileID: 1601087242}
   - {fileID: 1795259542}
   - {fileID: 614226575}
+  - {fileID: 2043203707}

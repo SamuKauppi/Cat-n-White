@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37baefb559f7e5841997ee105b285cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDist: 5
+  maxDist: 20
   cameraSpeed: 10
+  maxSpeed: 10
   minDist: 0.1
   playerObj: {fileID: 0}
 --- !u!1 &8289905645376090825

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BubbleManager : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class BubbleManager : MonoBehaviour
 
 			bubbles[0].Pop();
 			bubbles.RemoveAt(0);
+
+            // Load win screen
+            if(bubbles.Count <= 0)
+            {
+                SceneManager.LoadScene(2);
+            }
 		}
 	}
 }

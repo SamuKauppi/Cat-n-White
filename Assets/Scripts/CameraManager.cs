@@ -4,6 +4,7 @@ public class CameraManager : MonoBehaviour
 {
     [SerializeField] private float maxDist = 2f;
     [SerializeField] private float cameraSpeed = 1f;
+    [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float minDist = 0.25f;
     [SerializeField] private Transform playerObj;
 
@@ -15,7 +16,7 @@ public class CameraManager : MonoBehaviour
         if (dist > minDist)
         {
             dist = Mathf.Clamp(0f, maxDist, dist);
-            cameraSpeed = Mathf.Lerp(0f, cameraSpeed, dist / maxDist);
+            cameraSpeed = Mathf.Lerp(0f, maxSpeed, dist / maxDist);
             transform.Translate(Time.deltaTime * cameraSpeed * (playerObj.position - transform.position).normalized);
         }
     }

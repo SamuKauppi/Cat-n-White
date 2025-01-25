@@ -7,10 +7,10 @@ public class SoundManager : MonoBehaviour
 	public static SoundManager soundManager;
 	public AudioClip[] audioClips;
 	public AudioSource audioSource;
-	public float volume;
+	private float volume;
+	private float volumeModifier;
 	private void Awake()
 	{
-		volume = 0.3f;
 
 		if (soundManager == null)
 		{
@@ -22,10 +22,13 @@ public class SoundManager : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
-	private void Update()
-	{
-		audioSource.volume = volume;
-	}
+
+    private void Start()
+    {
+		volumeModifier = PersitentManager.Instance.GetVolume();
+        volume = 0.3f;
+        audioSource.volume = volume * volumeModifier;
+    }
 
 	public void PlaySound(string clipName, bool loop = false)
 	{
