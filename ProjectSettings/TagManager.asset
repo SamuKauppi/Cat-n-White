@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Claw
+  - '&'
+  - BG
   layers:
   - Default
   - TransparentFX
@@ -41,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: '&'
+    uniqueID: 4250860589
+    locked: 0
+  - name: Background
+    uniqueID: 3232747667
     locked: 0
