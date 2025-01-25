@@ -26,14 +26,17 @@ public class VisionManager : MonoBehaviour
 
 	public void SetActivated()
 	{
-		if(Camera.main.backgroundColor != black)
+		if (Camera.main.backgroundColor == black)
 		{
+			t = 0;
 			StartCoroutine(ShowThings(black, white));
 		}
 		else
 		{
+			t = 0;
 			StartCoroutine(ShowThings(white, black));
 		}
 	}
+
 
 }

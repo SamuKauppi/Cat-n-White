@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private VisionManager visionManager;
 	[SerializeField] private GravityPoint gravityPoint;
 	[SerializeField] private PlayerMove player;
+	[SerializeField] private SoundManager soundManager;
 
 	private void Awake()
 	{
@@ -21,19 +22,23 @@ public class GameManager : MonoBehaviour
 		switch (trigger)
 		{
 			case Type.Gravity:
+				soundManager.PlaySound("Catfloat"); 
 				gravityPoint.SwapGravity();
 				break;
 
 			case Type.Kill:
+				soundManager.PlaySound("Death"); 
 				player.KillPlayer();
 				break;
 
 			case Type.BubblePop:
+				soundManager.PlaySound("Plop");
 				bubbleManager.PopBubble();
 				player.SetRespawn();
 				break;
 
 			case Type.Vision:
+				soundManager.PlaySound("Vision");
 				visionManager.SetActivated();
 				break;
 		}
