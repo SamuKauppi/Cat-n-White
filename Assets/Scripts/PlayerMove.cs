@@ -28,4 +28,9 @@ public class PlayerMove : MonoBehaviour
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
         }
     }
+
+    public void KillPlayer()
+    {
+        Debug.Log("Player Dies");
+    }
 }
