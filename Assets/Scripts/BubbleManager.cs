@@ -1,16 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BubbleManager : MonoBehaviour
 {
-    public void explote()
+	public List<BubblePopper> bubbles;
+
+    private void Start()
     {
-        Destroy(this);
+        for (int i = 0; i < bubbles.Count; i++)
+        {
+            bubbles[i].gameObject.SetActive(true);
+        }
     }
 
-	private void OnDestroy()
-	{
-		//Do effect of plopping
+    public void PopBubble()
+    {
+		if(bubbles.Count > 0) {
+
+			bubbles[0].Pop();
+			bubbles.RemoveAt(0);
+		}
 	}
 }

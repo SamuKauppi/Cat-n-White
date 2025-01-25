@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GravityPoint : MonoBehaviour
@@ -22,17 +20,12 @@ public class GravityPoint : MonoBehaviour
         {
             gravity = gravityScale * (playerTarget.position - transform.position).normalized;
             if (Mathf.Abs(gravity.magnitude) == 0f)
-                gravity = Vector3.down * gravityScale;
+                gravity = gravityScale * Vector3.down;
             Physics2D.gravity = gravity;
         }
         else if (Vector3.Distance(playerRb.position, swapPosition) > swapDist)
         {
             isSwapping = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.W) && !isSwapping)
-        {
-            SwapGravity();
         }
     }
 
@@ -41,8 +34,7 @@ public class GravityPoint : MonoBehaviour
         isSwapping = true;
         swapPosition = playerTarget.position;
         swapDirection = transform.position - swapPosition;
-        Physics2D.gravity = swapDirection;
+        Physics2D.gravity = 1.5f * gravityScale * swapDirection;
         swapDist = Vector3.Distance(swapPosition, transform.position) * 1.5f;
-        playerRb.AddForce(playerTarget.up * 10f);
     }
 }

@@ -6,6 +6,12 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance { get; private set; }
 
+	[SerializeField] private BubbleManager bubbleManager;
+	[SerializeField] private VisionManager visionManager;
+	[SerializeField] private GravityPoint gravityPoint;
+	[SerializeField] private PlayerMove player;
+	[SerializeField] private SoundManager soundManager;
+
 	private void Awake()
 	{
 		Instance = this;
@@ -15,24 +21,25 @@ public class GameManager : MonoBehaviour
 	{
 		switch (trigger)
 		{
-			case Type.Move:
-				Debug.Log("Move the trap");
-				break;
-
 			case Type.Gravity:
-				Debug.Log("Gravity changed");
+				soundManager.PlaySound("Catfloat"); 
+				gravityPoint.SwapGravity();
 				break;
 
 			case Type.Kill:
-				Debug.Log("Dead kitty");
+				soundManager.PlaySound("Death"); 
+				player.KillPlayer();
 				break;
+
 			case Type.BubblePop:
-				//Bubble.explote();
-				Debug.Log("Plop!");
+				soundManager.PlaySound("Plop");
+				bubbleManager.PopBubble();
+				player.SetRespawn();
 				break;
+
 			case Type.Vision:
-				//Bubble.explote();
-				Debug.Log("Switch black to white");
+				soundManager.PlaySound("Vision");
+				visionManager.SetActivated();
 				break;
 		}
 	}
