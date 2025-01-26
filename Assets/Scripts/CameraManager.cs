@@ -10,14 +10,18 @@ public class CameraManager : MonoBehaviour
 
     float dist;
 
-    private void Update()
+    private void LateUpdate()
     {
         dist = Vector3.Distance(transform.position, playerObj.position);
+        Debug.Log(dist);
         if (dist > minDist)
         {
-            dist = Mathf.Clamp(0f, maxDist, dist);
-            cameraSpeed = Mathf.Lerp(0f, maxSpeed, dist / maxDist);
-            transform.Translate(Time.deltaTime * cameraSpeed * (playerObj.position - transform.position).normalized);
+            cameraSpeed = Mathf.Lerp(0f, maxSpeed, (dist - minDist) / (maxDist - minDist)) * Time.deltaTime;
+            Debug.Log(Mathf.Lerp(0f, maxSpeed, (dist - minDist) / (maxDist - minDist)));
+            if (cameraSpeed < dist)
+            {
+                transform.Translate(cameraSpeed * (playerObj.position - transform.position).normalized);
+            }
         }
     }
 }
