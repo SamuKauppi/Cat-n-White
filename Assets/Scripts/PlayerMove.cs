@@ -7,23 +7,26 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private LayerMask bubbleLayer;
     [SerializeField] private Vector2 respwan;
 
     private Vector2 direction;
+
     private float angle;
     public bool IsEnabled { get; private set; } = true;
 
-	private void Start()
-	{
-		respwan = transform.position;
-	}
-	private void FixedUpdate()
+    private void Start()
+    {
+        respwan = transform.position;
+    }
+
+    private void FixedUpdate()
     {
         CalculateAngle();
 
         if (IsEnabled)
             CheckInput();
-        
+
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
@@ -49,11 +52,11 @@ public class PlayerMove : MonoBehaviour
 
     private void CheckInput()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             rb.AddForce(moveSpeed * Time.fixedDeltaTime * -transform.right);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             rb.AddForce(moveSpeed * Time.fixedDeltaTime * transform.right);
         }
