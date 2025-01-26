@@ -7,11 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: fd905c15d677e45d19bf2c76097b3bd1
+    guid: 24b2303529a640948aa6f43468b1c24e
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
     guid: d0bedfd23599167449207fb37d2251e1
   - enabled: 1
-    path: Assets/Scenes/Winner.unity
-    guid: 1ac9e1a9985ae3844bc90bd3482ef32e
+    path: Assets/Scenes/Victory.unity
+    guid: 13b1c3a250c0b40d9a8c72bbf398fd11
   m_configObjects: {}

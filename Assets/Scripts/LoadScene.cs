@@ -12,7 +12,7 @@ public class LoadScene : MonoBehaviour
 
     private void Start()
     {
-        if (endMusic != null) ;
+        if (endMusic != null) 
         endMusic.volume = PersitentManager.Instance.GetVolume() * 0.3f;
 
 
