@@ -33,14 +33,12 @@ public class GameManager : MonoBehaviour
 
 			case Type.BubblePop:
 				soundManager.PlaySound("Plop");
+				soundManager.PlaySound("Vision");
+				visionManager.SetActivated();
 				bubbleManager.PopBubble();
 				player.SetRespawn();
 				break;
 
-			case Type.Vision:
-				soundManager.PlaySound("Vision");
-				visionManager.SetActivated();
-				break;
 		}
 	}
 }
