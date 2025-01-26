@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private GravityPoint gravityPoint;
 	[SerializeField] private PlayerMove player;
 	[SerializeField] private SoundManager soundManager;
+	[SerializeField] private CameraManager cameraManager;
 
 	private void Awake()
 	{
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
 				visionManager.SetActivated();
 				bubbleManager.PopBubble();
 				player.SetRespawn();
+				cameraManager.StartZoom();
 				break;
 
 		}
