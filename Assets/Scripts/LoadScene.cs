@@ -4,7 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    public float delayBeforeLoad = 0.1f; // Delay in seconds
+	public float delayBeforeLoad = 0.1f; // Delay in seconds
+
+	[SerializeField] private AudioSource endMusic;
+
+    private void Start()
+    {
+        endMusic.volume = PersitentManager.Instance.GetVolume() * 0.3f;
+    }
 
     public void StartLoad(int index)
     {

@@ -101,7 +101,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1024
+        y: 1536
         width: 512
         height: 512
       alignment: 0
@@ -122,7 +122,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 1024
+        y: 1536
         width: 512
         height: 512
       alignment: 0
@@ -143,7 +143,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1024
+        y: 1536
         width: 512
         height: 512
       alignment: 0
@@ -163,8 +163,8 @@ TextureImporter:
       name: bubbleanimation_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
+        x: 1536
+        y: 1536
         width: 512
         height: 512
       alignment: 0
@@ -184,8 +184,8 @@ TextureImporter:
       name: bubbleanimation_4
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
+        x: 0
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -205,8 +205,8 @@ TextureImporter:
       name: bubbleanimation_5
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
+        x: 512
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -226,8 +226,8 @@ TextureImporter:
       name: bubbleanimation_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1024
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -247,8 +247,8 @@ TextureImporter:
       name: bubbleanimation_7
       rect:
         serializedVersion: 2
-        x: 512
-        y: 0
+        x: 1536
+        y: 1024
         width: 512
         height: 512
       alignment: 0
@@ -268,8 +268,8 @@ TextureImporter:
       name: bubbleanimation_8
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 0
+        x: 0
+        y: 512
         width: 512
         height: 512
       alignment: 0
@@ -281,6 +281,48 @@ TextureImporter:
       bones: []
       spriteID: 5d3d39fd3cc3aa7428ce6101637547bc
       internalID: 1269908990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bubbleanimation_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d84ea34af8ed6d458fe0b02fbcf5c9b
+      internalID: -1349362142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bubbleanimation_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d9d5f3a365dbe4c8f5a665389964b0
+      internalID: 1509655972
       vertices: []
       indices: 
       edges: []
@@ -298,6 +340,7 @@ TextureImporter:
     nameFileIdTable:
       bubbleanimation_0: -1165174914
       bubbleanimation_1: -140183733
+      bubbleanimation_10: 1509655972
       bubbleanimation_2: 954440272
       bubbleanimation_3: 523782190
       bubbleanimation_4: 1761090140
@@ -305,6 +348,7 @@ TextureImporter:
       bubbleanimation_6: 2105047101
       bubbleanimation_7: -185704108
       bubbleanimation_8: 1269908990
+      bubbleanimation_9: -1349362142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
