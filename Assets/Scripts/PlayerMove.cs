@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerMove : MonoBehaviour
 
     private Vector2 direction;
     private float angle;
+    public bool IsEnabled { get; private set; } = true;
 
 	private void Start()
 	{
@@ -18,7 +20,10 @@ public class PlayerMove : MonoBehaviour
 	private void FixedUpdate()
     {
         CalculateAngle();
-        CheckInput();
+
+        if (IsEnabled)
+            CheckInput();
+        
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
@@ -63,5 +68,12 @@ public class PlayerMove : MonoBehaviour
     {
         transform.position = respwan;
         rb.velocity = Vector2.zero;
+        SetPlayerEnable(false);
+    }
+
+    public void SetPlayerEnable(bool value)
+    {
+        IsEnabled = value;
+        rb.isKinematic = !value;
     }
 }
