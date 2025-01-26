@@ -9,6 +9,7 @@ public class BubblePopper : MonoBehaviour
 
     private void Start()
     {
+        anim.enabled = false;
         children = new SpriteRenderer[transform.childCount];
         for (int i = 0; i < children.Length; i++)
         {
@@ -21,6 +22,7 @@ public class BubblePopper : MonoBehaviour
 
     public void Pop()
     {
+        anim.enabled = true;
         anim.SetBool("Pop", true);
     }
 
