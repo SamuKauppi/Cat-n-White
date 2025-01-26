@@ -49,8 +49,11 @@ MonoBehaviour:
   maxDist: 20
   minSpeed: 4
   maxSpeed: 10
+  zoomSpeed: 0.5
+  zoomAmount: 0.35
   playerObj: {fileID: 0}
   playerMove: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!1 &8289905645376090825
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9dba4862689ba4e19909516917d06d92
+guid: 5c51e74ed4abcce49855661d8ccb9cd1
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Meows
+  - Amatic SC
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

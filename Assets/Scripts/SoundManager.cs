@@ -25,8 +25,8 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-		volumeModifier = PersitentManager.Instance.GetVolume();
-        volume = 0.3f;
+		//volumeModifier = PersitentManager.Instance.GetVolume();
+		volume = 0.3f;
         audioSource.volume = volume * volumeModifier;
     }
 
